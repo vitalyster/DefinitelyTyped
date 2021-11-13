@@ -105,10 +105,8 @@ declare namespace PushNotifications {
         isAlwaysUseFCM?: boolean | undefined;
     }
     interface Data {
-        /** REQUIRED */
-        title: string;
-        /** REQUIRED */
-        body: string;
+        title?: string | undefined;
+        body?: string | undefined;
         custom?: { [key: string]: string | number } | string | undefined;
         /**
          * gcm, apn. Supported values are 'high' or 'normal' (gcm). Will be translated to 10 and 5 for apn. Defaults
